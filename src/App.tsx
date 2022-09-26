@@ -45,7 +45,7 @@ function MainApp() {
   return (
     <Container maxWidth="xl">
       <Typography variant="h4" my={4}>
-        React TS x Regions of Indonesia
+        React TS SWR x Regions of Indonesia
       </Typography>
 
       <Grid container spacing={2} my={4}>
