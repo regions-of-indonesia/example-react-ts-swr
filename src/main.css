@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+||==============================================================================
+||  Base
+||==============================================================================
+*/
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply text-neutral-900 dark:text-neutral-50 transition-colors;
+
+    background-color: var(--body-pattern-bg);
+    opacity: 1;
+    background-image: radial-gradient(var(--body-pattern-dot) 2px, var(--body-pattern-bg) 2px);
+    background-size: var(--body-pattern-size) var(--body-pattern-size);
+  }
+
+  body {
+    --body-pattern-bg: #fafafa;
+    --body-pattern-dot: #e5e5e5;
+  }
+
+  [data-mode="dark"] body {
+    --body-pattern-bg: #171717;
+    --body-pattern-dot: #262626;
+  }
+
+  body {
+    --body-pattern-size: 60px;
+  }
+
+  @media screen(sm) {
+    body {
+      --body-pattern-size: 75px;
+    }
+  }
+
+  @media screen(md) {
+    body {
+      --body-pattern-size: 90px;
+    }
+  }
+
+  @media screen(lg) {
+    body {
+      --body-pattern-size: 105px;
+    }
+  }
+
+  @media screen(xl) {
+    body {
+      --body-pattern-size: 120px;
+    }
+  }
+
+  @media screen(2xl) {
+    body {
+      --body-pattern-size: 145px;
+    }
+  }
+}
+
+/*
+||==============================================================================
+||  Utilities
+||==============================================================================
+*/
+
+.hidden-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hidden-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

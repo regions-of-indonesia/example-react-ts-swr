@@ -8,7 +8,9 @@ const client = new RegionsOfIndonesiaClient({
   },
   middlewares: [
     log(),
-    delay({ ms: 50 }),
+    delay({
+      ms: 1000,
+    }),
     cache({
       driver: createLocalForageDriver(),
     }),
